@@ -1,0 +1,19 @@
+.choice-two {
+  background-color: #F0F5F5;
+  width: max-content;
+  padding: 10px 5px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 20px;
+  }
+  &-buy {
+    cursor: pointer;
+    padding: 5px 30px;
+    border-radius: 8px;
+    &-selected {
+      background-color: #08D899;
+
+    }
+  }
+}

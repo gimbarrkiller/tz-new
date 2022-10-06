@@ -1,0 +1,45 @@
+.main-block {
+  &__row {
+    display: flex;
+    h2 {
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+  &__place-order {
+    background: url("../../../img/bg-place-prder.svg") no-repeat #fff;
+    background-position-y: 125%;
+    background-position-x: 50%;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    border-radius: 16px;
+    .choice {
+      align-self: center;
+      margin-left: 25px;
+      &-top {
+        color: #676767;
+        cursor: pointer;
+        margin-right: 10px;
+        &-selected {
+          color: #092326;
+          border-bottom: solid 2px #08D899;
+          cursor: pointer;
+        }
+      }
+    }
+    .form-block {
+      .inputs-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.order-list {
+  th {
+    border-bottom: 1px solid #E8E8F3;
+  }
+  &:hover {
+    border-bottom: none;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+  }
+  .filled {
+    background-color: #08D899;
+    color: #ffffff;
+    padding: 2px 5px;
+    border-radius: 8px;
+  }
+  .not-filled {
+    background-color: #FFFFFF;
+    border: solid 1px #CDD2DD;
+    color: #CDD2DD;
+    padding: 2px 5px;
+    border-radius: 8px;
+  }
+  .cancel {
+    color: #08D899;
+  }
+}

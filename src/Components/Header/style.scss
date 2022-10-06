@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1320px;
+  margin: auto;
+  .button {
+    position: absolute;
+    right: 2rem;
+    top: calc(2rem - 5px);
+  }
+}

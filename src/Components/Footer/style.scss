@@ -1,0 +1,38 @@
+footer {
+    background-color: #F0F5F5;
+}
+
+.footer {
+  padding: 2rem;
+  margin: auto;
+  max-width: 1320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    color: #959596;
+  }
+  p {
+    color: #959596;
+    font-size: 16px;
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    p {
+      font-size: 14px;
+    }
+    img {
+      width: 150px;
+      align-self: center;
+    }
+  }
+  &-right {
+    img {
+      margin-left: 10px;
+    }
+  }
+}

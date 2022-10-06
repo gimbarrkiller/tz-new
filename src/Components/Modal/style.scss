@@ -1,0 +1,33 @@
+.ReactModal__Content {
+  .button {
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .button {
+      width: 45%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  .text-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px #CDD2DD;
+    &-sell {
+      border-bottom: none;
+      justify-content: space-around;
+    }
+  }
+  .order-book-list {
+    margin-bottom: 15px;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

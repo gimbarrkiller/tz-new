@@ -1,0 +1,41 @@
+.input {
+  &-text {
+    background-color: #f0f5f5;
+    padding: 5px!important;
+    border-radius: 8px;
+    margin-bottom: 10px!important;
+
+    .MuiInputBase-root {
+      padding-left: 10px;
+    }
+    .MuiFormLabel-root {
+      padding-left: 10px;
+    }
+    .MuiInput-underline {
+      &:before {
+        border-bottom: none;
+      }
+      &:hover:not(.Mui-disabled):before {
+        border-bottom: none;
+      }
+      &:after {
+        border-bottom: none;
+      }
+    }
+    .MuiFormLabel-root.Mui-focused {
+      color: #08D899;
+    }
+    &-big {
+      width: 60%;
+      @media screen and (max-width: 768px) {
+        width: 99%;
+      }
+    }
+    &-normal {
+      width: 35%;
+      @media screen and (max-width: 768px) {
+        width: 99%;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.button {
+  background-color: #08D899;
+  border: solid 1px #08D899;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  &:hover {
+    background-color: #0fc990;
+    border: solid 1px #0FC990FF;
+  }
+  &-disabled {
+    color: #949697;
+    background-color: #f0f5f5;
+    border: solid 1px #f0f5f5;
+    &:hover {
+      cursor: not-allowed;
+      background-color: #f0f5f5;
+      border: solid 1px #f0f5f5;
+    }
+  }
+  &-white {
+    background-color: #E7EBF1;
+    border: solid 1px #E7EBF1;
+    color: #949697;
+    &:hover {
+      background-color: #d4d5da;
+      border: solid 1px #d4d5da;
+    }
+  }
+}

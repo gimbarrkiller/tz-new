@@ -1,0 +1,19 @@
+.order-book-list {
+  margin-bottom: 8px;
+  width: 300px;
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
+  .first-order {
+    width: 76%;
+    background-color: #B2F1DE;
+    border-radius: 8px;
+    padding: 5px 10px;
+    @media screen and (max-width: 920px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 75%;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.main-block {
+  &__my-orders {
+    background-color: #fff;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    border-radius: 16px;
+    &-table {
+      overflow: auto;
+      position: relative;
+      height: 220px;
+
+    }
+    table {
+      width: 100%;
+      th {
+        text-align: left;
+        padding: 10px 5px;
+      }
+    }
+    .not-wallet {
+      text-align: center;
+    }
+  }
+}

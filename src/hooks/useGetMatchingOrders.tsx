@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_PATH, GET_MATCHING_ORDERS } from "../api/constVariable";
-import { addOrders } from "../store/reducers/ordersInBackReducer";
+import { addMatchOrders } from "../store/reducers/ordersInBackReducer";
 import {
   gettingMatchingOrders,
   showInfoModal,
@@ -22,7 +22,7 @@ const useGetMatchingOrders = () => {
       .then(
         (result) => {
           dispatch(startLoading(true))
-          dispatch(addOrders(result))
+          dispatch(addMatchOrders(result))
         },
         (error) => {
           console.log(error)

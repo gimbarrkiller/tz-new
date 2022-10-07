@@ -1,8 +1,8 @@
 import { BASE_PATH, GET_ORDERS } from "../api/constVariable";
-import {useDispatch, useSelector} from "react-redux";
-import {addOrders} from "../store/reducers/ordersInBackReducer";
-import {gettingOrders, showInfoModal, startLoading} from "../store/reducers/mainPageReducer";
-import {useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addOrders } from "../store/reducers/ordersInBackReducer";
+import { gettingOrders, showInfoModal, startLoading } from "../store/reducers/mainPageReducer";
+import { useEffect } from "react";
 
 const useGetOrders = () => {
   const { form, isOrdersLoad } = useSelector((state: any) => state.mainPage)

@@ -23,7 +23,7 @@ const customStyles = {
 
 const ModalOrderDetails = () => {
   const { form, isInfoModalShow } = useSelector((state: any) => state.mainPage)
-  console.log(isInfoModalShow)
+
   const dispatch = useDispatch()
   const closeModal = () => {
     dispatch(showInfoModal(false))

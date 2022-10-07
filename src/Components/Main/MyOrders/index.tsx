@@ -10,19 +10,20 @@ const MyOrders = () => {
   return (
     <div className="main-block__my-orders">
       <h2>My Orders</h2>
-      {!orders.length ? (
+      {orders.length ? (
         <div className="main-block__my-orders-table">
           <table>
             <MyOrderListTop />
-            {orders.map(() => {
+            {orders.map((order: any) => {
               return (
                 <MyOrderList
-                  type={orders.filled}
-                  side={orders.filled}
-                  amount={orders.filled}
-                  price={orders.filled}
-                  filled={orders.filled}
-                  cancel={orders.cancel}
+                  type={!!order?.tokenA && !!order?.tokenB}
+                  side={order?.tokenB}
+                  amount={order?.amountA}
+                  price={`${+order?.amountA + +order?.amountB}`}
+                  filled={order?.amountLeftToFill}
+                  status={order?.amountLeftToFill}
+                  cancel={order?.isCanceled}
                 />
               )
             })}

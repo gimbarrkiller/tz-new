@@ -19,12 +19,13 @@ export type ModalType = {
 }
 
 export type MyOrderListType = {
-  type?: string
+  type?: boolean
   side?: string
   amount?: string
   price?: string
   filled?: string
-  cancel?: string
+  status?: string
+  cancel?: boolean
 }
 
 export type ChoiceType = {

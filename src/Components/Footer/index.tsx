@@ -3,6 +3,13 @@ import GrayLine from "../UI/GrayLine";
 import './style.scss';
 
 const Footer = () => {
+  const socialIcons = [
+    '../../img/facebook.svg',
+    '../../img/tweeter.svg',
+    '../../img/youtube.svg',
+    '../../img/instagram.svg',
+  ]
+
   return (
     <>
       <GrayLine />
@@ -18,10 +25,13 @@ const Footer = () => {
             <p>©2022 All rights reserved. Powered by Atla</p>
           </div>
           <div className="footer-right">
-            <a href="#"><img src="../../img/facebook.svg" alt="logo" /></a>
-            <a href="#"><img src="../../img/tweeter.svg" alt="logo" /></a>
-            <a href="#"><img src="../../img/youtube.svg" alt="logo" /></a>
-            <a href="#"><img src="../../img/instagram.svg" alt="logo" /></a>
+            {socialIcons.map((icon) => {
+              return (
+                <a href="#">
+                  <img src={icon} alt="logo" />
+                </a>
+              )
+            })}
           </div>
         </div>
       </footer>

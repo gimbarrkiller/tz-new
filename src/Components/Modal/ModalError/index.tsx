@@ -4,13 +4,14 @@ import Button from "../../UI/Button";
 import { showErrorModal } from "../../../store/reducers/mainPageReducer";
 import "../style.scss"
 
+const screenWidth = window.innerWidth
 const customStyles = {
   content: {
     top: '50%',
     left: '50%',
     bottom: 'auto',
     transform: 'translate(-50%, -50%)',
-    width: '350px',
+    width: screenWidth > 450 ? '400px' : '85%',
     borderRadius: '8px',
   },
 };
@@ -27,6 +28,7 @@ const ModalError = () => {
       onRequestClose={closeModal}
       contentLabel="Example Modal"
       style={customStyles}
+      ariaHideApp={false}
     >
       <h2>Wrong Network</h2>
       <p>Fill in all the fields</p>

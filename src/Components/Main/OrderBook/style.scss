@@ -4,6 +4,12 @@
     padding: 10px;
     border-radius: 16px;
     margin: 0 10px 10px 0;
+    @media screen and (max-width: 920px) {
+      margin: 0 0 10px 0;
+    }
+    h2 {
+      width: 300px;
+    }
     .order-book-list {
       display: flex;
       flex-direction: row;

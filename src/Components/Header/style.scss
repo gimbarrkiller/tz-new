@@ -9,4 +9,12 @@
     right: 2rem;
     top: calc(2rem - 5px);
   }
+  @media screen and (max-width: 500px) {
+    text-align: left;
+    padding: 1rem;
+    .button {
+      right: 1rem;
+      top: calc(1rem - 5px);
+    }
+  }
 }

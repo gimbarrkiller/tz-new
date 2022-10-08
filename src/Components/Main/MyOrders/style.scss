@@ -4,6 +4,9 @@
     margin: 0 10px 10px 0;
     padding: 10px;
     border-radius: 16px;
+    @media screen and (max-width: 920px) {
+      margin: 0 0 10px 0;
+    }
     &-table {
       overflow: auto;
       position: relative;

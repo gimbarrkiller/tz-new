@@ -10,13 +10,14 @@ import OrderBookList from "../../Main/OrderBook/OrderBookList";
 import useGetMatchingOrders from "../../../hooks/useGetMatchingOrders";
 import "../style.scss"
 
+const screenWidth = window.innerWidth
 const customStyles = {
   content: {
     top: '50%',
     left: '50%',
     bottom: 'auto',
     transform: 'translate(-50%, -50%)',
-    width: '400px',
+    width: screenWidth > 450 ? '400px' : '85%',
     borderRadius: '8px',
   },
 };
@@ -44,6 +45,7 @@ const ModalOrderDetails = () => {
       onRequestClose={closeModal}
       contentLabel="Example Modal"
       style={customStyles}
+      ariaHideApp={false}
     >
       <h2>Order Details</h2>
       <p className="text-row">

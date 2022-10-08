@@ -5,16 +5,16 @@ import MyOrderList from "./MyOrderList";
 import "./style.scss";
 
 const MyOrders = () => {
-  const { orders } = useSelector((state: any) => state.orders)
+  const { myOrders } = useSelector((state: any) => state.orders)
 
   return (
     <div className="main-block__my-orders">
       <h2>My Orders</h2>
-      {orders.length ? (
+      {myOrders?.data?.length ? (
         <div className="main-block__my-orders-table">
           <table>
             <MyOrderListTop />
-            {orders.map((order: any) => {
+            {myOrders?.map((order: any) => {
               return (
                 <MyOrderList
                   type={!!order?.tokenA && !!order?.tokenB}

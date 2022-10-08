@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const ordersInBackReducer = createSlice({
   name: 'orders',
   initialState: {
-    orders: [],
+    myOrders: [],
     matchOrders: [],
   },
   reducers: {
-    addOrders(state, action) {
-      state.orders = action.payload
+    addMyOrders(state, action) {
+      state.myOrders = action.payload
     },
     addMatchOrders(state, action) {
       state.matchOrders = action.payload
@@ -16,5 +16,5 @@ const ordersInBackReducer = createSlice({
   }
 })
 
-export const { addOrders, addMatchOrders } = ordersInBackReducer.actions
+export const { addMyOrders, addMatchOrders } = ordersInBackReducer.actions
 export default ordersInBackReducer.reducer

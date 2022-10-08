@@ -5,13 +5,16 @@ import {useSelector} from "react-redux";
 
 
 const OrderBook = () => {
-  const { matchOrders } = useSelector((state: any) => state.mainPage)
+  const { matchOrders } = useSelector((state: any) => state.orders)
+
   return (
     <div className="main-block__order-book">
       <h2>Order book</h2>
       {!!matchOrders?.length ? (
-        matchOrders.map(() => {
-          <OrderBookList />
+        matchOrders?.map(() => {
+          return (
+            <OrderBookList />
+          )
         })
       ) : (
         <p className="choose-tokens">Choose tokens to see prices</p>

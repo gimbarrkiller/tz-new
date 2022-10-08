@@ -1,26 +1,30 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_PATH, GET_ORDERS } from "../api/constVariable";
-import { addOrders } from "../store/reducers/ordersInBackReducer";
+import { addMyOrders } from "../store/reducers/ordersInBackReducer";
+import axios from "axios";
 
 
 const useGetMyOrders = () => {
   const { myLogin } = useSelector((state: any) => state.mainPage)
-  const ORDER_PARAMS = `${myLogin && `user=${myLogin}`}`
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    !!myLogin && fetch(`${BASE_PATH}/${GET_ORDERS}?${ORDER_PARAMS}`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          dispatch(addOrders(result))
-        },
-        (error) => {
-          console.log(error)
-        }
-      )
+    !!myLogin && axios.get(`${BASE_PATH}/${GET_ORDERS}`, {
+      params: {
+        ...myLogin ? { user: myLogin } : {}
+      },
+    })
+      .then((response) => {
+        dispatch(addMyOrders(response.data))
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(function () {
+        console.log("finally")
+      });
   }, [myLogin])
 }
 export default useGetMyOrders

@@ -25,9 +25,12 @@ const Footer = () => {
             <p>©2022 All rights reserved. Powered by Atla</p>
           </div>
           <div className="footer-right">
-            {socialIcons.map((icon) => {
+            {socialIcons.map((icon, index) => {
               return (
-                <a href="#">
+                <a
+                  href="#"
+                  key={index}
+                >
                   <img src={icon} alt="logo" />
                 </a>
               )
